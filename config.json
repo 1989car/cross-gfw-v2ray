@@ -1,11 +1,11 @@
 {
-  "port": 17173,
   "log" : {
     "access": "/var/log/v2ray/access.log",
     "error": "/var/log/v2ray/error.log",
     "loglevel": "warning"
   },
   "inbound": {
+    "port": 12345,
     "protocol": "vmess",
     "settings": {
       "clients": [
@@ -15,6 +15,9 @@
           "alterId": 1024
         }
       ]
+    },
+     "streamSettings": {
+            "network": "kcp"
     }
   },
   "outbound": {
@@ -28,7 +31,7 @@
       "settings": {
         "method": "chacha20",
         "password": "v2rayss",
-        "udp": false,
+        "udp": true,
         "level": 1
       }
     }
