@@ -10,9 +10,9 @@
     "settings": {
       "clients": [
         {
-          "id": "60ca58e9-003e-4c01-98de-c2223ae49153",
+          "id": "1ad52bdc-16d1-41a5-811d-f5c0c76d677b",
           "level": 1,
-          "alterId": 64
+          "alterId": 1024
         }
       ]
     }
@@ -20,5 +20,17 @@
   "outbounds": [{
     "protocol": "freedom",
     "settings": {}
-  }]
+  }],
+  "inboundDetour": [
+    {
+      "protocol": "shadowsocks",
+      "port": 30001,
+      "settings": {
+        "method": "chacha20",
+        "password": "v2rayss",
+        "udp": true,
+        "level": 1
+      }
+    }
+  ]
 }
